@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+div{
+background-color:grey ;
+}
+</style>
+</head>	
+<body>
+
+<script languaje="javascript">
+function as()
+{
+
+var nota=0;
+
+
+
+if (document.f.a[0].checked)
+{
+nota=nota+3;
+}
+
+if (document.f.a[1].checked)
+{
+nota=nota-3;
+}
+
+
+if (document.f.a[2].checked)
+{
+nota=nota-3;
+}
+
+
+
+if (document.f.b[0].checked)
+{
+nota=nota-2;
+}
+
+if (document.f.b[1].checked)
+{
+nota=nota+2;
+}
+
+if (document.f.b[2].checked)
+{
+nota=nota-2;
+}
+
+
+
+if (document.f.c[0].checked)
+{
+nota=nota-5;
+}
+
+if (document.f.c[1].checked)
+{
+nota=nota-5;
+}
+
+if (document.f.c[2].checked)
+{
+nota=nota+5;
+}
+
+alert("La nota final es "+nota);
+
+}
+
+</script>
+<form name="f">
+<br><br>
+<div>
+¿cuantos años tengo?<br><br>
+
+selecciome una:<br><br>
+<input type="radio" name="a">a-21<br><br>
+<input type="radio" name="a">b-13<br><br>
+<input type="radio" name="a">c-28<br><br>
+</div>
+<br><br>
+<div>
+¿cual es mi comida favoria?<br><br>
+
+selecciome una:<br><br>
+<input type="radio" name="b">a-hamburguesa<br><br>
+<input type="radio" name="b">b-espagueis<br><br>
+<input type="radio" name="b">c-pollo asado<br><br>
+</div>
+<br><br>
+<div>
+¿cuantos hermanos tengo?<br><br>
+
+selecciome una:<br><br>
+<input type="radio" name="c">a-1<br><br>
+<input type="radio" name="c">b-6<br><br>
+<input type="radio" name="c">c-2<br><br>
+</div>
+</form>
+<br><br>
+<button onclick="as()">siguiente</button>
+</body>
+</html>

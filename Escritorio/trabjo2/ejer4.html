@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+h2{
+	background-color: orange;
+	color: blue;
+	display: inline-block;
+}
+
+table{
+	background-color: yellow;
+	border-style: solid;
+    border-color: black;
+}
+        
+td{
+	text-align: center;
+	border: 5px;
+}
+</style>      
+</head>
+<body>
+<script languaje="javascript">
+
+function as()
+{
+
+var nombre=document.f.nombre.value;
+var apellido=document.f.apellido.value;
+var apellido2=document.f.apellido2.value;
+var correo = document.f.correo.value;
+var ss1=document.f.ss1.value;
+var ss2=document.f.ss2.value;
+
+
+if ( document.f.nombre.value.length==0)
+{
+nombre=document.f.nombre.focus();
+alert("no puede estar vacio");
+return false;
+}
+if ( document.f.apellido.value.length==0)
+{
+apellido=document.f.apellido.focus();
+alert("no puede estar vacio");
+return false;
+}
+
+if ( document.f.apellido2.value.length==0)
+{
+apellido=document.f.apellido2.focus();
+alert("no puede estar vacio");
+return false;
+}
+
+if ( document.f.correo.value.length==0)
+{
+correo=document.f.correo.focus();
+alert("no puede estar vacio");
+return false; 
+}
+
+if ( document.f.ss1.value.length!=7)
+{
+ss1=document.f.ss1.focus();
+alert("no puede estar vacio");
+return false; 
+
+}
+if (!=isNaN(document.f.ss1.value)){
+
+}
+else{
+alert("ERROR")
+}
+
+if ( document.f.ss2.value.length==1 || document.f.ss2.value.length==2)
+{
+ss2=document.f.ss2.focus();
+alert("no puede estar vacio");
+return false; 
+}
+if (!=isNaN(document.f.ss2.value)){
+
+}
+else{
+alert("ERROR")
+}
+
+
+}
+
+
+</script>
+
+<form id="f">
+<h2>Solicitud del informe de Vida Laboral</h2>
+<table border="5">
+<tr>
+<td>Nombre:</td>
+<td><input type="text" name="nombre" size="20"><br> </td>
+</tr>
+<tr>
+<td>Primer Apellido:</td>
+<td><input type="text" name="apellido" size="20"><br></td>
+</tr>
+<tr>
+<td>Segunda Apellido:</td>
+<td><input type="text" name="apellido2" size="20"><br></td>
+</tr>
+<tr>
+<td>Correo Electronico:</td>
+<td><input type="text" name="email" id="email" size="20"><br></td>
+</tr>
+<tr>   
+<td>Número de afiliado a la S.S:</td>
+<td><select>
+<option>A CORUÑA </option>
+<option>MADRID</option>
+<option>BARCELONA</option>
+</select>
+<input type="text" name="ss1" size="7"> 
+<input type="text" name="ss2" size="2">
+</td>
+</tr>     
+</table>
+</form><br>
+
+<button onclick="as(); es();">Enviar</button>
+<button>Borrar</button>
+
+</body>
+</html>

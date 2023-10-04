@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script languaje="javascript">
+
+function as()
+{
+
+var total=12000;
+
+
+
+
+
+if (document.f.a[0].checked  && document.f.b[0].checked)
+{
+total=total-2000;
+alert(total);
+
+}
+else{
+if (document.f.b[0].checked)
+{
+alert("solo disposible para gasolina");
+}
+else{
+if (document.f.a[0].checked)
+{
+
+alert(total);
+
+}
+}
+}
+
+
+if (document.f.a[1].checked)
+{
+total=total+1500;
+alert(total);
+}
+if (document.f.a[2].checked)
+{
+total=total+3000;
+alert(total);
+}
+
+if (document.f.b[1].checked)
+{
+alert(total);
+}
+if (document.f.b[2].checked)
+{
+total=total+1500;
+alert(total);
+}
+
+if (document.f.c[0].checked)
+{
+alert(total);
+}
+
+if (document.f.c[1].checked)
+{
+alert(total);
+}
+
+if (document.f.c[2].checked)
+{
+alert(total);
+}
+
+if (document.f.c[3].checked)
+{
+total=total-500;
+alert(total);
+}
+
+if (document.f.c[4].checked)
+{
+total=total-600;
+alert(total);
+}
+
+
+
+
+if (document.f.d.checked && (document.f.c[0].checked || document.f.c[1].checked || document.f.c[2].checked))
+{
+total=total+750;
+alert(total);
+}
+else{
+if (document.f.d.checked)
+{
+alert("solo con rojo verde y naranja");
+}
+}
+
+
+if (document.f.e.checked)
+{
+total=total+200;
+alert(total);
+}
+if (document.f.g.checked)
+{
+total=total+800;
+alert(total);
+}
+if (document.f.h.checked)
+{
+total=total+340;
+alert(total);
+}
+
+
+
+if (document.f.i.checked && document.f.b[2].checked)
+{
+total=total+800;
+alert(total);
+}
+else{
+if (document.f.i.checked)
+{
+alert("solo modelo familiar");
+}
+}
+
+
+
+alert("El precio final es "+total+"€");
+}
+</script>
+<form name="f">
+
+<fieldset>
+Configuracion del Coche
+</fieldset>
+        
+<fieldset>
+Tipo de Motor <br>
+<input type="radio" name="a">Gasolina
+<input type="radio" name="a">Diesel (+1500€)
+<input type="radio" name="a">Hibrido (+3000€)
+ </fieldset>
+        
+<fieldset>
+Tipo de Puertas<br>
+<input type="radio" name="b"> 3 Puertas (-2000€)(Solo en Gasolina)
+<input type="radio" name="b"> 5 Puertas
+<input type="radio" name="b"> Familiar (+1500€)
+</fieldset>
+
+<fieldset>
+Tipo de Pintura<br>
+<input type="radio" name="c">Rojo
+<input type="radio" name="c">Verde
+<input type="radio" name="c">Naranja
+<input type="radio" name="c">Blanco (-500€)
+<input type="radio" name="c">Negro (-600€)
+</fieldset>
+         
+<fieldset>
+Seleccionar las que se deseen:<br>
+<input type="checkbox" name="d">Metalizada (+750€) (Solo Rojo, Verde o Naranja)<br>
+<input type="checkbox" name="e">Llantas (+200€)<br>
+<input type="checkbox" name="g">Climatizador (+800€)<br>
+<input type="checkbox" name="h">GPS (+340€)<br>
+<input type="checkbox" name="i">DVD (+800€)(Solo modelo Familiar)
+</fieldset>     
+<fieldset>
+Total a Cobrar<br>
+<button onclick="as()">Calcular</button>
+</fieldset>
+</form>
+</body>
+</html>
